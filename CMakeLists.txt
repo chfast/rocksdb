@@ -414,6 +414,7 @@ endif()
 include_directories(${PROJECT_SOURCE_DIR})
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(SYSTEM ${PROJECT_SOURCE_DIR}/third-party/gtest-1.7.0/fused-src)
+add_definitions(-DGTEST_HAS_TR1_TUPLE=0 -DGTEST_HAS_STD_TUPLE=1)
 find_package(Threads REQUIRED)
 
 add_subdirectory(third-party/gtest-1.7.0/fused-src/gtest)
